@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/Users/sillygoose/.cache/nvim/packer_hererocks/2.1.1699801871/share/lua/5.1/?.lua;/Users/sillygoose/.cache/nvim/packer_hererocks/2.1.1699801871/share/lua/5.1/?/init.lua;/Users/sillygoose/.cache/nvim/packer_hererocks/2.1.1699801871/lib/luarocks/rocks-5.1/?.lua;/Users/sillygoose/.cache/nvim/packer_hererocks/2.1.1699801871/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/Users/sillygoose/.cache/nvim/packer_hererocks/2.1.1699801871/lib/lua/5.1/?.so"
+local package_path_str = "/Users/sillygoose/.cache/nvim/packer_hererocks/2.1.1736781742/share/lua/5.1/?.lua;/Users/sillygoose/.cache/nvim/packer_hererocks/2.1.1736781742/share/lua/5.1/?/init.lua;/Users/sillygoose/.cache/nvim/packer_hererocks/2.1.1736781742/lib/luarocks/rocks-5.1/?.lua;/Users/sillygoose/.cache/nvim/packer_hererocks/2.1.1736781742/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/Users/sillygoose/.cache/nvim/packer_hererocks/2.1.1736781742/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -109,6 +109,16 @@ _G.packer_plugins = {
     path = "/Users/sillygoose/.local/share/nvim/site/pack/packer/start/friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
   },
+  ["go.nvim"] = {
+    loaded = true,
+    path = "/Users/sillygoose/.local/share/nvim/site/pack/packer/start/go.nvim",
+    url = "https://github.com/ray-x/go.nvim"
+  },
+  ["guihua.lua"] = {
+    loaded = true,
+    path = "/Users/sillygoose/.local/share/nvim/site/pack/packer/start/guihua.lua",
+    url = "https://github.com/ray-x/guihua.lua"
+  },
   harpoon = {
     loaded = true,
     path = "/Users/sillygoose/.local/share/nvim/site/pack/packer/start/harpoon",
@@ -154,14 +164,44 @@ _G.packer_plugins = {
     path = "/Users/sillygoose/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
+  ["seti.vim"] = {
+    config = { "\27LJ\2\n4\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\21colorscheme seti\bcmd\bvim\0" },
+    loaded = true,
+    path = "/Users/sillygoose/.local/share/nvim/site/pack/packer/start/seti.vim",
+    url = "https://github.com/trusktr/seti.vim"
+  },
+  ["telescope-file-browser.nvim"] = {
+    loaded = true,
+    path = "/Users/sillygoose/.local/share/nvim/site/pack/packer/start/telescope-file-browser.nvim",
+    url = "https://github.com/nvim-telescope/telescope-file-browser.nvim"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/Users/sillygoose/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
+  ["toggleterm.nvim"] = {
+    loaded = true,
+    path = "/Users/sillygoose/.local/share/nvim/site/pack/packer/start/toggleterm.nvim",
+    url = "https://github.com/akinsho/toggleterm.nvim"
+  },
+  ["transparent.nvim"] = {
+    config = { "\27LJ\2\n´\1\0\0\4\0\a\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\0024\3\0\0=\3\6\2B\0\2\1K\0\1\0\fexclude\17extra_groups\1\4\0\0\16NormalFloat\19NvimTreeNormal\21NvimTreeNormalNC\1\0\3\fexclude\0\17extra_groups\0\venable\2\nsetup\16transparent\frequire\0" },
+    loaded = true,
+    path = "/Users/sillygoose/.local/share/nvim/site/pack/packer/start/transparent.nvim",
+    url = "https://github.com/xiyaowong/transparent.nvim"
   }
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: transparent.nvim
+time([[Config for transparent.nvim]], true)
+try_loadstring("\27LJ\2\n´\1\0\0\4\0\a\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\0024\3\0\0=\3\6\2B\0\2\1K\0\1\0\fexclude\17extra_groups\1\4\0\0\16NormalFloat\19NvimTreeNormal\21NvimTreeNormalNC\1\0\3\fexclude\0\17extra_groups\0\venable\2\nsetup\16transparent\frequire\0", "config", "transparent.nvim")
+time([[Config for transparent.nvim]], false)
+-- Config for: seti.vim
+time([[Config for seti.vim]], true)
+try_loadstring("\27LJ\2\n4\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\21colorscheme seti\bcmd\bvim\0", "config", "seti.vim")
+time([[Config for seti.vim]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then
